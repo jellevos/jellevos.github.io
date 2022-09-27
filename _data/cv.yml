@@ -3,95 +3,67 @@
   contents:
     - name: Full Name
       value: Jelle Vos
-    - name: Date of Birth
-      value: 6th March 1998
+    - name: Year of Birth
+      value: 1998
     - name: Languages
       value: Dutch, English
+      
+- title: Experience
+  type: time_table
+  contents:
+    - title: PhD Student
+      institution: Delft University of Technology
+      year: Jul 2021 - now
+      description:
+        - Doing research in homomorphic encryption-based multi-party computation, optimizing arithmetic circuits
+        - Teaching about fully-homomorphic encryption
+        
+    - title: Teaching Assistant
+      institution: Delft University of Technology
+      year: Aug 2020 - Jan 2021
+      description:
+        - Coordinating the physical shared study labs for MSc students during the pandemic
+        - Helping students with questions about cryptography, machine learning and statistics
+        - Answering questions and checking students' work for Security & Cryptography
+    
+    - title: Software Development Intern
+      institution: ING Group
+      year: Apr 2018 - Jul 2018
+      description:
+        - Working Agile in a team of four students
+        - Building a real-time collaborative work environment for Customer Journey Experts using Polymer
+        - Users were enthusiastic and ING has continued developing the application
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: MSc Computer Science: Cyber Security
+      institution: Delft University of Technology
+      year: Sep 2019 - Jun 2021
+      
+    - title: BSc Computer Science \& Engineering
+      institution: Delft University of Technology
+      year: Sep 2015 - Jan 2019
+      
+    - title: Bilingual VWO - Gymnasium
+      institution: Grotius College Delft
+      year: Aug 2009 - Jul 2015
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - title: <a href="https://github.com/jellevos/scicrypt">scicrypt</a>
+      year: 2021 - now
+      description: Lightweight cryptographic building blocks for multi-party computation. 
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+    - title: Lattice-based cryptography.
+    - title: Number theory.
+    - title: Discrete optimization.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Field hockey.
