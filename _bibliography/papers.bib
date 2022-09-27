@@ -111,20 +111,20 @@ freely available.},
 }
 
 @InProceedings{10.1007/978-3-031-17140-6_20,
-author="Vos, Jelle
+author={Vos, Jelle
 and Vos, Dani{\"e}l
-and Erkin, Zekeriya",
-editor="Atluri, Vijayalakshmi
+and Erkin, Zekeriya},
+editor={Atluri, Vijayalakshmi
 and Di Pietro, Roberto
 and Jensen, Christian D.
-and Meng, Weizhi",
-title="Efficient Circuits for Permuting and Mapping Packed Values Across Leveled Homomorphic Ciphertexts",
-booktitle="Computer Security -- ESORICS 2022",
-year="2022",
-publisher="Springer International Publishing",
-address="Cham",
-pages="408--423",
-abstract="Cloud services are an essential part of our digital infrastructure as organizations outsource large amounts of data storage and computations. While organizations typically keep sensitive data in encrypted form at rest, they decrypt it when performing computations, leaving the cloud provider free to observe the data. Unfortunately, access to raw data creates privacy risks. To alleviate these risks, researchers have developed secure outsourced data processing techniques. Such techniques enable cloud services that keep sensitive data encrypted, even during computations. For this purpose, fully homomorphic encryption is particularly promising, but operations on ciphertexts are computationally demanding. Therefore, modern fully homomorphic cryptosystems use packing techniques to store and process multiple values within a single ciphertext. However, a problem arises when packed data in one ciphertext does not align with another. For this reason, we propose a method to construct circuits that perform arbitrary permutations and mappings of such packed values. Unlike existing work, our method supports moving values across multiple ciphertexts, considering that the values in real-world scenarios cannot all be packed within a single ciphertext. We compare our open-source implementation against the state-of-the-art method implemented in HElib, which we adjusted to work with multiple ciphertexts. When data is spread among five or more ciphertexts, our method outperforms the existing method by more than an order of magnitude. Even when we only consider a permutation within a single ciphertext, our method still outperforms the state-of-the-art works implemented by HElib for circuits of similar depth.",
-isbn="978-3-031-17140-6",
-code="https://github.com/jellevos/perm_map_circuits"
+and Meng, Weizhi},
+title={Efficient Circuits for Permuting and Mapping Packed Values Across Leveled Homomorphic Ciphertexts},
+booktitle={Computer Security -- ESORICS 2022},
+year={2022},
+publisher={Springer International Publishing},
+address={Cham},
+pages={408--423},
+abstract={Cloud services are an essential part of our digital infrastructure as organizations outsource large amounts of data storage and computations. While organizations typically keep sensitive data in encrypted form at rest, they decrypt it when performing computations, leaving the cloud provider free to observe the data. Unfortunately, access to raw data creates privacy risks. To alleviate these risks, researchers have developed secure outsourced data processing techniques. Such techniques enable cloud services that keep sensitive data encrypted, even during computations. For this purpose, fully homomorphic encryption is particularly promising, but operations on ciphertexts are computationally demanding. Therefore, modern fully homomorphic cryptosystems use packing techniques to store and process multiple values within a single ciphertext. However, a problem arises when packed data in one ciphertext does not align with another. For this reason, we propose a method to construct circuits that perform arbitrary permutations and mappings of such packed values. Unlike existing work, our method supports moving values across multiple ciphertexts, considering that the values in real-world scenarios cannot all be packed within a single ciphertext. We compare our open-source implementation against the state-of-the-art method implemented in HElib, which we adjusted to work with multiple ciphertexts. When data is spread among five or more ciphertexts, our method outperforms the existing method by more than an order of magnitude. Even when we only consider a permutation within a single ciphertext, our method still outperforms the state-of-the-art works implemented by HElib for circuits of similar depth.},
+isbn={978-3-031-17140-6},
+code={https://github.com/jellevos/perm_map_circuits}
 }
