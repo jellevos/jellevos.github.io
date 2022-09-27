@@ -2,6 +2,38 @@
 ---
 
 @inproceedings{DBLP:conf/wifs/VosED21,
+  abstract  = {In their pursuit to maximize their return on in-
+vestment, cybercriminals will likely reuse as much as possible
+between their campaigns. Not only will the same phishing
+mail be sent to tens of thousands of targets, but reuse of
+the tools and infrastructure across attempts will lower their
+costs of doing business. This reuse, however, creates an effective
+angle for mitigation, as defenders can recognize domain names,
+attachments, tools, or systems used in a previous compromisation
+attempt, significantly increasing the cost to the adversary as it
+would become necessary to recreate the attack infrastructure
+each time.
+However, generating such cyber threat intelligence (CTI) is
+resource-intensive, so organizations often turn to CTI providers
+that commercially sell feeds with such indicators. As providers
+have different sources and methods to obtain their data, the
+coverage and relevance of feeds will vary for each of them. To
+cover the multitude of threats one organization faces, they are
+best served by obtaining feeds from multiple providers. However,
+these feeds may overlap, causing an organization to pay for
+indicators they already obtained through another provider.
+This paper presents a privacy-preserving protocol that allows
+an organization to query the databases of multiple data providers
+to obtain an estimate of their total coverage without revealing
+the data they store. In this way, a customer can make a
+more informed decision on their choice of CTI providers. We
+implement this protocol in Rust to validate its performance
+experimentally: When performed between three CTI providers
+who collectively have 20,000 unique indicators, our protocol takes
+less than 6 seconds to execute. The code for our experiments is
+freely available.},
+  pdf       = {https://eprint.iacr.org/2021/1260.pdf},
+  code      = {https://github.com/jellevos/mpsu-ca},
   author    = {Jelle Vos and
                Zekeriya Erkin and
                Christian Doerr},
