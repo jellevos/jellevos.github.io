@@ -1,12 +1,11 @@
-github_users:
-  - torvalds
-  - alshedivat
+#github_users:
+#  - torvalds
+#  - alshedivat
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - jellevos/scicrypt
+  - jellevos/threshold-multiparty-psi
+  - jellevos/mpsu-ca
+  - jellevos/mpc-bench
+  - jellevos/private-logic-and-mpso
+  - jellevos/sets_multisets
