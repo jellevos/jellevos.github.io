@@ -1,6 +1,27 @@
 ---
 ---
 
+@inproceedings{DBLP:conf/secrypt/BayEAV21,
+  abstract  = {Multi-Party Private Set Intersection (MPSI) is an attractive topic in research since a practical MPSI protocol can be deployed in several real-world scenarios, including but not limited to finding the common list of customers among several companies or privacy-preserving analyses of data from different stakeholders. Several solutions have been proposed in the literature however, the existing solutions still suffer from performance related challenges such as long run-time and high bandwidth demand, particularly when the number of involved parties grows. In this paper, we propose a new approach based on threshold additively homomorphic encryption scheme, e.g., Paillier, which enables us to process the bit-set representation of sets under encryption. By doing so, it is feasible to securely compute the intersection of several data sets in an efficient manner. To prove our claims on performance, we compare the communication complexity of our approach with the existing solutions and show p erformance test results. We also show how the proposed protocol can be extended to securely compute other set operations on multi-party data sets.},
+  author    = {Asl{\'{\i}} Bay and
+               Zeki Erkin and
+               Mina Alishahi and
+               Jelle Vos},
+  editor    = {Sabrina De Capitani di Vimercati and
+               Pierangela Samarati},
+  title     = {Multi-Party Private Set Intersection Protocols for Practical Applications},
+  booktitle = {Proceedings of the 18th International Conference on Security and Cryptography,
+               {SECRYPT} 2021, July 6-8, 2021},
+  pages     = {515--522},
+  publisher = {{SCITEPRESS}},
+  year      = {2021},
+  url       = {https://doi.org/10.5220/0010547605150522},
+  doi       = {10.5220/0010547605150522},
+  timestamp = {Mon, 27 Dec 2021 13:47:00 +0100},
+  biburl    = {https://dblp.org/rec/conf/secrypt/BayEAV21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
 @inproceedings{DBLP:conf/wifs/VosED21,
   abstract  = {In their pursuit to maximize their return on in-
 vestment, cybercriminals will likely reuse as much as possible
@@ -52,25 +73,23 @@ freely available.},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-@inproceedings{DBLP:conf/secrypt/BayEAV21,
-  abstract  = {Multi-Party Private Set Intersection (MPSI) is an attractive topic in research since a practical MPSI protocol can be deployed in several real-world scenarios, including but not limited to finding the common list of customers among several companies or privacy-preserving analyses of data from different stakeholders. Several solutions have been proposed in the literature however, the existing solutions still suffer from performance related challenges such as long run-time and high bandwidth demand, particularly when the number of involved parties grows. In this paper, we propose a new approach based on threshold additively homomorphic encryption scheme, e.g., Paillier, which enables us to process the bit-set representation of sets under encryption. By doing so, it is feasible to securely compute the intersection of several data sets in an efficient manner. To prove our claims on performance, we compare the communication complexity of our approach with the existing solutions and show p erformance test results. We also show how the proposed protocol can be extended to securely compute other set operations on multi-party data sets.},
-  author    = {Asl{\'{\i}} Bay and
-               Zeki Erkin and
-               Mina Alishahi and
-               Jelle Vos},
-  editor    = {Sabrina De Capitani di Vimercati and
-               Pierangela Samarati},
-  title     = {Multi-Party Private Set Intersection Protocols for Practical Applications},
-  booktitle = {Proceedings of the 18th International Conference on Security and Cryptography,
-               {SECRYPT} 2021, July 6-8, 2021},
-  pages     = {515--522},
-  publisher = {{SCITEPRESS}},
-  year      = {2021},
-  url       = {https://doi.org/10.5220/0010547605150522},
-  doi       = {10.5220/0010547605150522},
-  timestamp = {Mon, 27 Dec 2021 13:47:00 +0100},
-  biburl    = {https://dblp.org/rec/conf/secrypt/BayEAV21.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@InProceedings{10.1007/978-3-031-17140-6_20,
+author={Jelle Vos
+and Dani{\"e}l Vos
+and Zekeriya Erkin},
+editor={Atluri, Vijayalakshmi
+and Di Pietro, Roberto
+and Jensen, Christian D.
+and Meng, Weizhi},
+title={Efficient Circuits for Permuting and Mapping Packed Values Across Leveled Homomorphic Ciphertexts},
+booktitle={Computer Security -- ESORICS 2022},
+year={2022},
+publisher={Springer International Publishing},
+address={Cham},
+pages={408--423},
+abstract={Cloud services are an essential part of our digital infrastructure as organizations outsource large amounts of data storage and computations. While organizations typically keep sensitive data in encrypted form at rest, they decrypt it when performing computations, leaving the cloud provider free to observe the data. Unfortunately, access to raw data creates privacy risks. To alleviate these risks, researchers have developed secure outsourced data processing techniques. Such techniques enable cloud services that keep sensitive data encrypted, even during computations. For this purpose, fully homomorphic encryption is particularly promising, but operations on ciphertexts are computationally demanding. Therefore, modern fully homomorphic cryptosystems use packing techniques to store and process multiple values within a single ciphertext. However, a problem arises when packed data in one ciphertext does not align with another. For this reason, we propose a method to construct circuits that perform arbitrary permutations and mappings of such packed values. Unlike existing work, our method supports moving values across multiple ciphertexts, considering that the values in real-world scenarios cannot all be packed within a single ciphertext. We compare our open-source implementation against the state-of-the-art method implemented in HElib, which we adjusted to work with multiple ciphertexts. When data is spread among five or more ciphertexts, our method outperforms the existing method by more than an order of magnitude. Even when we only consider a permutation within a single ciphertext, our method still outperforms the state-of-the-art works implemented by HElib for circuits of similar depth.},
+isbn={978-3-031-17140-6},
+code={https://github.com/jellevos/perm_map_circuits}
 }
 
 @article{DBLP:journals/iacr/VosCE22,
@@ -108,23 +127,4 @@ freely available.},
   timestamp = {Sat, 08 Jan 2022 02:24:02 +0100},
   biburl    = {https://dblp.org/rec/journals/tifs/BayEHSV22.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@InProceedings{10.1007/978-3-031-17140-6_20,
-author={Jelle Vos
-and Dani{\"e}l Vos
-and Zekeriya Erkin},
-editor={Atluri, Vijayalakshmi
-and Di Pietro, Roberto
-and Jensen, Christian D.
-and Meng, Weizhi},
-title={Efficient Circuits for Permuting and Mapping Packed Values Across Leveled Homomorphic Ciphertexts},
-booktitle={Computer Security -- ESORICS 2022},
-year={2022},
-publisher={Springer International Publishing},
-address={Cham},
-pages={408--423},
-abstract={Cloud services are an essential part of our digital infrastructure as organizations outsource large amounts of data storage and computations. While organizations typically keep sensitive data in encrypted form at rest, they decrypt it when performing computations, leaving the cloud provider free to observe the data. Unfortunately, access to raw data creates privacy risks. To alleviate these risks, researchers have developed secure outsourced data processing techniques. Such techniques enable cloud services that keep sensitive data encrypted, even during computations. For this purpose, fully homomorphic encryption is particularly promising, but operations on ciphertexts are computationally demanding. Therefore, modern fully homomorphic cryptosystems use packing techniques to store and process multiple values within a single ciphertext. However, a problem arises when packed data in one ciphertext does not align with another. For this reason, we propose a method to construct circuits that perform arbitrary permutations and mappings of such packed values. Unlike existing work, our method supports moving values across multiple ciphertexts, considering that the values in real-world scenarios cannot all be packed within a single ciphertext. We compare our open-source implementation against the state-of-the-art method implemented in HElib, which we adjusted to work with multiple ciphertexts. When data is spread among five or more ciphertexts, our method outperforms the existing method by more than an order of magnitude. Even when we only consider a permutation within a single ciphertext, our method still outperforms the state-of-the-art works implemented by HElib for circuits of similar depth.},
-isbn={978-3-031-17140-6},
-code={https://github.com/jellevos/perm_map_circuits}
 }
