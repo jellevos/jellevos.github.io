@@ -9,8 +9,9 @@ profile:
   image: profile_pic.jpeg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>TU Delft, Echo, room 02.310</p>
-    <p>Van Mourik Broekmanweg 5, 2628 XE Delft</p>
+    <p>TU Delft, Echo, 02.310</p>
+    <p>Van Mourik Broekmanweg 5</p>
+    <p>2628 XE Delft</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
