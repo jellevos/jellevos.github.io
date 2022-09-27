@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD student at <a href='https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/intelligent-systems/cybersecurity/computational-privacy/people/jelle-vos'>Delft University of Technology</a>
+subtitle: PhD student at <a href='https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/intelligent-systems/cybersecurity/computational-privacy/people/jelle-vos'>Delft University of Technology</a>.
 
 profile:
   align: right
@@ -18,4 +18,4 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-My research focuses on secure Multi-Party Computation (MPC) protocols using homomorphic encryption. I am specifically interested in lattice-based cryptography. I aim to apply these techniques to cyber threat intelligence, where classical solutions fall short due to the sensitive nature of data.
+My research focuses on secure **Multi-Party Computation** (MPC) protocols using **homomorphic encryption**. I am specifically interested in **lattice-based cryptography**. I aim to apply these techniques to **cyber threat intelligence**, where classical solutions fall short due to the sensitive nature of data.
