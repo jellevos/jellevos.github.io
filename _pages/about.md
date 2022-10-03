@@ -19,3 +19,5 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 My research focuses on secure **multi-party computation** protocols using **homomorphic encryption**. I am specifically interested in **lattice-based cryptography**. I aim to apply these techniques to **cyber threat intelligence**, where classical solutions fall short due to the sensitive nature of data.
+
+I am currently working at the [cyber security group](https://www.tudelft.nl/cybersecurity/) of the Delft University of Technology in the faculty of [EEMCS](https://www.tudelft.nl/en/eemcs/).
