@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Hi! My name is Jelle (pronounced <i>yeah-luhh</i>) and I am a PhD student at <a href='https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/intelligent-systems/cybersecurity/computational-privacy/people/jelle-vos'>Delft University of Technology</a>.
+subtitle: Hi! My name is Jelle (pronounced <i>yeah-luhh</i>) and I am a PhD student at <a href='https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/intelligent-systems/cybersecurity/computational-privacy/people/jelle-vos'>Delft University of Technology</a>. 🏳️‍🌈
 
 profile:
   align: right
