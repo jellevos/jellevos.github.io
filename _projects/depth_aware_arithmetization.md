@@ -8,7 +8,7 @@ category: work
 ---
 
 This is a test.
-$x + 4$
+$$x + 4$$
 
 
 <!-- <div class="row justify-content-sm-center">
