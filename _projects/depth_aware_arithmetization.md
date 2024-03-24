@@ -13,7 +13,7 @@ Homomorphic encryption schemes like BGV allow users to perform computations on d
 
 The computation model described above is that of arithmetic circuits, and the process of turning a function into arithmetic is called <i>arithmetization</i>. If the plaintext space is a finite field (e.g. if the plaintext modulus $$p$$ is a prime), then any function can be turned into additions and multiplications. Doing so by hand, however, is a complex and time-consuming job. To prevent this, much research has been done to achieve efficient arithmetic circuits for primitives such as equality checks, comparisons, and OR operations. However, these circuits have typically not been generated with noise in mind.
 
-The noise in an arithmetic circuit is mainly determined by its multiplicative depth: the largest number of multiplications in any path through the circuit. On the other hand, the computational cost is typically decided by the multiplicative size: the total number of multiplications in the circuit. However, the concrete cost of a multiplication is bound to the multiplicative depth.
+The noise in an arithmetic circuit is mainly determined by its multiplicative depth: the largest number of multiplications in any path through the circuit. On the other hand, the computational cost is typically decided by the multiplicative size: the total number of multiplications in the circuit. However, the concrete cost of a multiplication is bound to the multiplicative depth. <b>Note that we only count multiplications between two variables; multiplications with constants are cheap to perform!</b>
 In this post, we look at three methods for finding circuits that (near-)optimally trade off multiplicative size and depth.
 
 <h2>Exponentiation & equality</h2>
@@ -24,15 +24,20 @@ A MaxSAT formulation is a SAT formulation with hard and soft clauses. Hard claus
 Our MaxSAT formulation computes some target exponent $$t$$. It uses variables $$x_i$$ for $$i = 1, \dots, t$$ to denote whether exponent $$i$$ has been reached in the circuit. Multiplications perform transitions between two inputs $$x_i$$ and $$x_j$$, and one output exponent $$x_{i+j}$$. We use variables $$y_{i,j}$$ to denote whether the circuit has performed a multiplication between $$x_i$$ and $$x_j$$. The hard clauses (presented in conjunctive normal form) are as follows:
 
 $$
-\bigvee_{i+j=k} y_{i,j} \vee \neg x_k \\
-\neg y_{i,j} \vee x_i \\
-\neg y_{i,j} \vee x_j \\
-x_t
+\bigvee_{i+j=k} y_{i,j} \vee \neg x_k,
 $$
 
-We consider $$i, j, k \in \{1, \dots, t\}$$. These clauses ensure that a multiplication can only be performed when its inputs have previously been computed and that we must exponentiate to $$t$$. The soft clauses are simply $$y_{i,j}$$. We can use a variable weight to denote that $$y_{i,i}$$ is cheaper to compute than $$y_{i,j}$$ for $$i \ne j$$.
+$$
+\neg y_{i,j} \vee x_i,
+$$
 
-Abbas & Gustafsson already add a powerful bound to model that $$x_k$$ can only be true if the following holds: $$x_{\lceil k/2 \rceil} \vee \dots \vee x_{k-1}$$. We also add the bounds by <a href=https://www.sciencedirect.com/science/article/pii/S0012365X20303861>Thurber & Clift</a>, which provide a speedup for larger values of $$t$$. Next to that, since we compute the entire Pareto front, we can use knowledge of previous computations to compute a lower and upper bound on the cost of the formulation.
+$$
+\neg y_{i,j} \vee x_j,
+$$
+
+We consider $$i, j, k \in \{1, \dots, t\}$$. We also enforce $$x_t$$. These clauses ensure that a multiplication can only be performed when its inputs have previously been computed and that we must exponentiate to $$t$$. The soft clauses are simply $$y_{i,j}$$. We can use a variable weight to denote that $$y_{i,i}$$ is cheaper to compute than $$y_{i,j}$$ for $$i \ne j$$.
+
+Abbas & Gustafsson already add a powerful bound to model that $$x_k$$ can only be true if the following holds: $$x_{\lceil k/2 \rceil} \vee \dots \vee x_{k-1}$$. We also add the bounds by <a href="https://www.sciencedirect.com/science/article/pii/S0012365X20303861">Thurber & Clift</a>, which provide a speedup for larger values of $$t$$. Next to that, since we compute the entire Pareto front, we can use knowledge of previous computations to compute a lower and upper bound on the cost of the formulation.
 
 Now, to take depth into account, we use the same technique as Abbas & Gustafsson, but since we are working with Boolean variables we cannot perform addition as easily. We choose to model the depth of $$x_k$$ using several variables $$d_{k,d'}$$ for $$d' \in \{1, \dots, \text{max depth} \}. We change the formulation accordingly, by adding several hard clauses.
 
@@ -41,7 +46,13 @@ The resulting formulation can be used to compute optimal Pareto fronts for expon
 Why go through so much effort to find optimal exponentiation circuits? The answer is that they are a crucial building block of many common primitives, so any optimizations here have a large impact on the final performance. For example, to check whether an input $$z \in \mathbb{Z}_p$$ is non-zero, we can compute $$z^{p-1}$$. This fact can then immediately be used to implement an equality check $$a = b$$ as $$1 - (a - b)^{p-1}$$.
 
 <h2>Univariate polynomial evaluation & comparisons</h2>
-Method and comparisons
+Arithmetic circuits compute multivariate polynomials. While it is easy to compute the multivariate polynomial that is computed by a circuit, the opposite is not true: it is extremely hard to find efficient circuits for arbitrary polynomials. Still, some common primitives do not have such natural formulations as the equality check shown above, so polynomial evaluation might be our best bet.
+
+While multivariate polynomials are very hard to arithmetize efficiently, univariate polynomials are somewhat easier to study. Much work has gone into this area. One of the most fundamental results is by <a href="https://epubs.siam.org/doi/abs/10.1137/0202007?casa_token=jW3FzEnzE4MAAAAA:vHWKzedWp3uVmgJcU3dFkprLtSYpwuriISDVmLS9BQa962g3S33GEf0TkUbdMZ1P9wLEJFA7UtWH">Paterson and Stockmeyer</a>, who provide two algorithms for computing univariate polynomials of degree $$d$$. The first method is a baby-step giant-step approach, which takes roughly $$2\sqrt{d}$$ multiplications. The second method alters the first method to achieve roughly $$\sqrt{2d}$$ multiplications. They show that the multiplicative size of these circuits is asymptotically optimal.
+
+These theoretical results are already of great practical value. However, Paterson & Stockmeyer only analyzed the multiplicative size of these circuits; not their depth. In fact, both methods have some parameter $$k$$ that must be set beforehand, and in choosing its value, the authors choose it to be optimal when it comes to the size of the circuit. We show that, by varying $$k$$, we can very efficiently produce a large amount of polynomial evaluation circuits of varying depth. While this does not produce provably optimal circuits, the circuits are close to optimal for small values of $$d$$.
+
+In previous work, <a href="https://hal.science/hal-03506798/">Iliashenko & Zucca</a> show how to efficiently express comparisons such as $$a < b$$ as a univariate polynomial, specifically when $$a, b < \frac{p-1}{2}$$. They use properties from the second method by Paterson & Stockmeyer to reduce the multiplicative size of the circuit. To amend the first method of Paterson & Stockmeyer to this same trick, we use the MaxSAT formulation above. Finally, we show that one can lift the restriction that $$a, b < \frac{p-1}{2}$$ by computing three polynomial evaluations.
 
 <h2>AND and OR operations over multiple variables</h2>
 Some dots on the front
