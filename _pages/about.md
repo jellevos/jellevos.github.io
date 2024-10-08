@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Hi! My name is Jelle (pronounced <i>yeah-luhh</i>) and I am a PhD student at <a href='https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/intelligent-systems/cybersecurity/computational-privacy/people/jelle-vos'>Delft University of Technology</a>. 🏳️‍🌈
+subtitle: Hi! My name is Jelle (pronounced <i>yeah-luhh</i>) and I am a PhD student at <a href='https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/intelligent-systems/cybersecurity/computational-privacy/people/jelle-vos'>Delft University of Technology</a>.
 
 profile:
   align: right
@@ -18,6 +18,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-My research focuses on secure **multi-party computation** protocols using **homomorphic encryption**. I am specifically interested in **lattice-based cryptography**. I aim to apply these techniques to **cyber threat intelligence**, where classical solutions fall short due to the sensitive nature of data.
+My research focuses on **secure computation** protocols using **homomorphic encryption**, and I am specifically interested in **lattice-based cryptography**. My main topics of research include *secure computation compilers*, *private set operations*, and *post-quantum cryptography*.
 
-I am currently working at the [cyber security group](https://www.tudelft.nl/cybersecurity/) of the Delft University of Technology in the faculty of [EEMCS](https://www.tudelft.nl/en/eemcs/).
+I am currently working in the [cyber security group](https://www.tudelft.nl/cybersecurity/) of Delft University of Technology in the faculty of [EEMCS](https://www.tudelft.nl/en/eemcs/) and as a remote contractor for Apple, where I work on post-quantum cryptography.
+
+```
+I am on the lookout for postdoc opportunities! I will finish my PhD at the end of June 2025.
+```
