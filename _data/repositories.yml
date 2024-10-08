@@ -3,6 +3,7 @@
 #  - alshedivat
 
 github_repos:
+  - jellevos/oraqle
   - jellevos/scicrypt
   - jellevos/threshold-multiparty-psi
   - jellevos/mpsu-ca
