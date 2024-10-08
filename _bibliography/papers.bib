@@ -73,8 +73,10 @@ freely available.},
   timestamp = {Sat, 09 Apr 2022 12:46:09 +0200},
   biburl    = {https://dblp.org/rec/conf/wifs/VosED21.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  selected  = {true},
 }
+
+
+
 
 @InProceedings{10.1007/978-3-031-17140-6_20,
 abbr={ESORICS},
@@ -94,7 +96,6 @@ pages={408--423},
 abstract={Cloud services are an essential part of our digital infrastructure as organizations outsource large amounts of data storage and computations. While organizations typically keep sensitive data in encrypted form at rest, they decrypt it when performing computations, leaving the cloud provider free to observe the data. Unfortunately, access to raw data creates privacy risks. To alleviate these risks, researchers have developed secure outsourced data processing techniques. Such techniques enable cloud services that keep sensitive data encrypted, even during computations. For this purpose, fully homomorphic encryption is particularly promising, but operations on ciphertexts are computationally demanding. Therefore, modern fully homomorphic cryptosystems use packing techniques to store and process multiple values within a single ciphertext. However, a problem arises when packed data in one ciphertext does not align with another. For this reason, we propose a method to construct circuits that perform arbitrary permutations and mappings of such packed values. Unlike existing work, our method supports moving values across multiple ciphertexts, considering that the values in real-world scenarios cannot all be packed within a single ciphertext. We compare our open-source implementation against the state-of-the-art method implemented in HElib, which we adjusted to work with multiple ciphertexts. When data is spread among five or more ciphertexts, our method outperforms the existing method by more than an order of magnitude. Even when we only consider a permutation within a single ciphertext, our method still outperforms the state-of-the-art works implemented by HElib for circuits of similar depth.},
 isbn={978-3-031-17140-6},
 code={https://github.com/jellevos/perm_map_circuits},
-selected={true},
 }
 
 @article{DBLP:journals/iacr/VosCE22,
@@ -134,4 +135,117 @@ selected={true},
   timestamp = {Sat, 08 Jan 2022 02:24:02 +0100},
   biburl    = {https://dblp.org/rec/journals/tifs/BayEHSV22.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+@inproceedings{DBLP:conf/sp/VosCE24,
+  author       = {Jelle Vos and
+                  Mauro Conti and
+                  Zekeriya Erkin},
+  title        = {SoK: Collusion-resistant Multi-party Private Set Intersections in
+                  the Semi-honest Model},
+  booktitle    = {{IEEE} Symposium on Security and Privacy, {SP} 2024, San Francisco,
+                  CA, USA, May 19-23, 2024},
+  pages        = {465--483},
+  publisher    = {{IEEE}},
+  year         = {2024},
+  url          = {https://doi.org/10.1109/SP54263.2024.00079},
+  doi          = {10.1109/SP54263.2024.00079},
+  timestamp    = {Sun, 06 Oct 2024 21:15:04 +0200},
+  biburl       = {https://dblp.org/rec/conf/sp/VosCE24.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  selected={true},
+}
+
+@inproceedings{DBLP:conf/IEEEares/ZahedaniVE23,
+  author       = {Armin Memar Zahedani and
+                  Jelle Vos and
+                  Zekeriya Erkin},
+  title        = {Practical Verifiable {\&} Privacy-Preserving Double Auctions},
+  booktitle    = {Proceedings of the 18th International Conference on Availability,
+                  Reliability and Security, {ARES} 2023, Benevento, Italy, 29 August
+                  2023- 1 September 2023},
+  pages        = {25:1--25:9},
+  publisher    = {{ACM}},
+  year         = {2023},
+  url          = {https://doi.org/10.1145/3600160.3600190},
+  doi          = {10.1145/3600160.3600190},
+  timestamp    = {Fri, 18 Aug 2023 08:45:10 +0200},
+  biburl       = {https://dblp.org/rec/conf/IEEEares/ZahedaniVE23.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/corr/abs-2305-15394,
+  author       = {Dani{\"{e}}l Vos and
+                  Jelle Vos and
+                  Tianyu Li and
+                  Zekeriya Erkin and
+                  Sicco Verwer},
+  title        = {Differentially-Private Decision Trees with Probabilistic Robustness
+                  to Data Poisoning},
+  journal      = {CoRR},
+  volume       = {abs/2305.15394},
+  year         = {2023},
+  url          = {https://doi.org/10.48550/arXiv.2305.15394},
+  doi          = {10.48550/ARXIV.2305.15394},
+  eprinttype    = {arXiv},
+  eprint       = {2305.15394},
+  timestamp    = {Tue, 06 Jun 2023 18:10:43 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2305-15394.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+@article{DBLP:journals/iacr/VosCE24a,
+  author       = {Jelle Vos and
+                  Mauro Conti and
+                  Zekeriya Erkin},
+  title        = {Oraqle: {A} Depth-Aware Secure Computation Compiler},
+  journal      = {{IACR} Cryptol. ePrint Arch.},
+  pages        = {1409},
+  year         = {2024},
+  url          = {https://eprint.iacr.org/2024/1409},
+  timestamp    = {Sat, 05 Oct 2024 20:55:33 +0200},
+  biburl       = {https://dblp.org/rec/journals/iacr/VosCE24a.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  selected={true},
+}
+
+@article{DBLP:journals/iacr/VosCE24,
+  author       = {Jelle Vos and
+                  Mauro Conti and
+                  Zekeriya Erkin},
+  title        = {Depth-Aware Arithmetization of Common Primitives in Prime Fields},
+  journal      = {{IACR} Cryptol. ePrint Arch.},
+  pages        = {1200},
+  year         = {2024},
+  url          = {https://eprint.iacr.org/2024/1200},
+  timestamp    = {Fri, 02 Aug 2024 09:02:12 +0200},
+  biburl       = {https://dblp.org/rec/journals/iacr/VosCE24.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/popets/VosPGMKECN24,
+  author       = {Jelle Vos and
+                  Sikha Pentyala and
+                  Steven Golob and
+                  Ricardo Maia and
+                  Dean F. Kelley and
+                  Zekeriya Erkin and
+                  Martine De Cock and
+                  Anderson Nascimento},
+  title        = {Privacy-Preserving Membership Queries for Federated Anomaly Detection},
+  journal      = {Proc. Priv. Enhancing Technol.},
+  volume       = {2024},
+  number       = {3},
+  pages        = {186--201},
+  year         = {2024},
+  url          = {https://doi.org/10.56553/popets-2024-0074},
+  doi          = {10.56553/POPETS-2024-0074},
+  timestamp    = {Thu, 18 Jul 2024 21:28:02 +0200},
+  biburl       = {https://dblp.org/rec/journals/popets/VosPGMKECN24.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  selected={true},
 }
