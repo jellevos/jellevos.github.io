@@ -11,6 +11,13 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Security Engineer
+        institution: Apple
+        year: Feb 2024 - now
+        description:
+          - Continuing my internship work on post-quantum cryptography
+          - Working as a part-time contractor next to my PhD
+        
     - title: PhD Student
       institution: Delft University of Technology
       year: Jul 2021 - now
@@ -18,6 +25,13 @@
         - Doing research in homomorphic encryption-based multi-party computation, optimizing arithmetic circuits
         - Teaching about fully-homomorphic encryption
         
+    - title: Cryptographic Engineering Intern
+        institution: Apple
+        year: May 2023 - Sep 2023
+        description:
+          - Designing a post-quantum alternative for a popular cryptographic protocol
+          - Presenting research to higher management
+
     - title: Teaching Assistant
       institution: Delft University of Technology
       year: Aug 2020 - Jan 2021
@@ -25,14 +39,7 @@
         - Coordinating the physical shared study labs for MSc students during the pandemic
         - Helping students with questions about cryptography, machine learning and statistics
         - Answering questions and checking students' work for Security & Cryptography
-        
-    - title: Software Developer 'Control & Naviagtion'
-      institution: LOBSTER Robotics
-      year: May 2018 - Nov 2020
-      description:
-        - Worked together with a multidisciplinary team of students to build a low-cost autonomous deep sea exploration robot
-        - Designed flexible and maintainable control software in Python
-    
+
     - title: Software Development Intern
       institution: ING Group
       year: Apr 2018 - Jul 2018
@@ -61,6 +68,10 @@
 - title: Open Source Projects
   type: time_table
   contents:
+    - title: <a href="https://github.com/jellevos/oraqle">oraqle</a>
+      year: 2022 - now
+      description: The oraqle secure computation compiler. 
+
     - title: <a href="https://github.com/jellevos/scicrypt">scicrypt</a>
       year: 2021 - now
       description: Lightweight cryptographic building blocks for multi-party computation. 
@@ -68,6 +79,7 @@
 - title: Academic Interests
   type: nested_list
   contents:
+    - title: Homomorphic encryption.
     - title: Lattice-based cryptography.
     - title: Number theory.
     - title: Discrete optimization.
