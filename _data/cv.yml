@@ -12,11 +12,11 @@
   type: time_table
   contents:
     - title: Security Engineer
-        institution: Apple
-        year: Feb 2024 - now
-        description:
-          - Continuing my internship work on post-quantum cryptography
-          - Working as a part-time contractor next to my PhD
+      institution: Apple
+      year: Feb 2024 - now
+      description:
+        - Continuing my internship work on post-quantum cryptography
+        - Working as a part-time contractor next to my PhD
         
     - title: PhD Student
       institution: Delft University of Technology
@@ -26,11 +26,11 @@
         - Teaching about fully-homomorphic encryption
         
     - title: Cryptographic Engineering Intern
-        institution: Apple
-        year: May 2023 - Sep 2023
-        description:
-          - Designing a post-quantum alternative for a popular cryptographic protocol
-          - Presenting research to higher management
+      institution: Apple
+      year: May 2023 - Sep 2023
+      description:
+        - Designing a post-quantum alternative for a popular cryptographic protocol
+        - Presenting research to higher management
 
     - title: Teaching Assistant
       institution: Delft University of Technology
