@@ -23,6 +23,7 @@ My research focuses on **secure computation** protocols using **homomorphic encr
 I am currently working in the [cyber security group](https://www.tudelft.nl/cybersecurity/) of Delft University of Technology in the faculty of [EEMCS](https://www.tudelft.nl/en/eemcs/) and as a remote contractor for Apple, where I work on post-quantum cryptography.
 
 ```
-I am on the lookout for postdoc opportunities or exciting research/engineering positions in industry!
+I am on the lookout for postdoc opportunities
+or exciting research/engineering positions!
 I will finish my PhD at the end of June 2025.
 ```
