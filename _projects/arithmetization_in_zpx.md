@@ -11,9 +11,9 @@ category: work
 <h2>Arithmetization in $\mathbb{F}_{p^d}$: Exploiting automorphisms</h2>
 In the finite fields $\mathbb{F}_p$ that we previously considered, all the useful operations are described by additions and multiplications. In those prime fields, the only automorphism is the identity map. However, when we consider non-prime fields $\mathbb{F}_{p^e}$, there are several useful automorphisms of the form $x \mapsto x^{p^k}$, where $0 < k < e$. When $k=1$, we call this the Frobenius automorphism. As such, where arithmetic circuits over $\mathbb{F}_p$ were only comprised of additions and multiplications, we now consider additions, multiplications, and automorphisms.
 
-While the automorphisms may not seem all that useful by themselves, they can be used to efficiently compute the field norm and trace. These operations, in turn, can be used to evaluate polynomials (as shown by )
+While the automorphisms may not seem all that useful by themselves, they can be used to efficiently compute the field norm and trace. These operations, in turn, can be used to (more) efficiently evaluate polynomials, as shown by Hiroki Okada, Rachel Player, and Simon Pohmann in [this article](https://eprint.iacr.org/2023/1304), or to speed up matrix multiplications, as shown by Jai Hyun Park in [this other article](https://eprint.iacr.org/2025/448).
 
-<h2>Arithmetization in $\mathbb{Z}_p/(X^N + 1)$: Exploiting batching</h2>
+<h2>Arithmetization in \\(\mathbb{Z}_p/(X^N + 1)\\): Exploiting batching</h2>
 Note: we only consider $N$ that are powers of two!
 
 
