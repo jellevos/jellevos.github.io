@@ -15,10 +15,8 @@ While these automorphisms may not seem all that useful by themselves, they can b
 
 
 
-<h2>Arithmetization in <span>\\(\mathbb{Z}_p/(X^N + 1)\\)</span>: Exploiting batching</h2>
+<h2>Arithmetization in <span class="math">\\(\mathbb{Z}_p/(X^N + 1)\\)</span>: Exploiting batching</h2>
 Note: we only consider $N$ that are powers of two!
-
-\## This is a header with math: $\sum_{i=1}^{n} i^2$
 
 
 <h2>Polynomial evaluation in $\mathbb{Z}_p/(X^N + 1)$</h2>
