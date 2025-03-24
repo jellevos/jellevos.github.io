@@ -14,7 +14,8 @@ In the finite fields \\(\mathbb{F}_p\\) that we previously considered, all the u
 While these automorphisms may not seem all that useful by themselves, they can be used to efficiently compute the field norm and trace. These operations, in turn, can be used to (more) efficiently evaluate polynomials, as shown by Hiroki Okada, Rachel Player, and Simon Pohmann in [this article](https://eprint.iacr.org/2023/1304), or to speed up matrix multiplications, as shown by Jai Hyun Park in [this other article](https://eprint.iacr.org/2025/448). In this blog post, we will focus on univariate polynomial evaluation, which allows us to compute comparison operations even more efficiently than before!
 
 So how does this work? The trick is that there is an identity relation between the field norm of any element \\(\alpha \in \mathbb{F}_{p^d}\\) and its minimal polynomial:
-$$ \operatorname{Norm} $$
+$$ \operatorname{Norm}(\alpha - x) = \operatorname{MiPo}(\alpha)(x), $$
+where \\(\operatorname{MiPo}(\alpha)\\) is the monic polynomial of the lowest degree that maps \\(\alpha\\) to zero.
 
 <h2 data-processed="0">Arithmetization in \( \mathbb{Z}_p/(X^N + 1) \): Exploiting batching</h2>
 Note: we only consider \\(N\\) that are powers of two!
