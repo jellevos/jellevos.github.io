@@ -7,7 +7,7 @@ importance: 1
 category: work
 ---
 
-<i>An eprint of this work will be out soon! I will update this page when it is ready.</i>
+See: https://eprint.iacr.org/2024/1200
 
 Homomorphic encryption schemes like BGV allow users to perform computations on data under encryption. Specifically, they can perform a number of additions and multiplications. There is a limit to the number of operations, induced by the noise that is added to these ciphertexts (for security purposes), and which grows after each addition or multiplication. We can increase the limit by choosing larger parameters, but these will slow down the computations.
 
@@ -73,4 +73,6 @@ These arithmetization can be combined into hybrid circuits that find a tradeoff 
 
 Given these two arithmetic circuits, we do not know which one is more performant in practice. We use HElib and fhegen to gather some preliminary results. For fhegen we used the OpenFHE model as it does not include rotations (we do not consider ciphertext packing). The results, when computed on an M1 CPU, are as follows: Circuit A takes 36.2 ms, circuit B takes 41.3 ms, circuit C takes 22.8 ms. Circuits A and C had a lower depth, which allowed the use of a smaller ring dimension. Moreover, circuit C had a lower cost than circuit A as it has fewer multiplications (and two multiplications are squarings).
 
-We are currently integrating these algorithms in the <a href="https://github.com/jellevos/oraqle">oraqle compiler</a> for secure computation, which we plan to release in April.
+~We are currently integrating these algorithms in the <a href="https://github.com/jellevos/oraqle">oraqle compiler</a> for secure computation, which we plan to release in April.~
+The oraqle compiler is available! Some of the early features are described in: https://eprint.iacr.org/2024/1409
+
