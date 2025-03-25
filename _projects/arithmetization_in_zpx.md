@@ -9,7 +9,7 @@ category: work
 [In a previous blog post](/projects/depth_aware_arithmetization), we presented methods for performing depth aware arithmetization in prime fields \\(\mathbb{F}_p\\). In other words, we showed how to realize high-level circuits in \\(\mathbb{F}_p\\), which only defines additions and multiplications. What made these methods <i>depth-aware</i>, is that we generated circuits that achieve a trade off between their multiplicative depth (the largest number of multiplications on any path through the circuit) and the total number of multiplications. These methods allowed us to generate more efficient circuits for e.g. comparisons (\\(a < b\\)) than previous works. However, these methods leave several things to be desired: they do not consider batching and automorphisms. In this blog post, we will show how to consider automorphisms by extending beyond prime fields, and how to further optimize circuits in the context of homomorphic encryption by exploiting batching in the polynomial ring.
 
 <h2 data-processed="0">Arithmetization in \(\mathbb{F}_{p^d}\): Exploiting automorphisms</h2>
-In the finite fields \(\mathbb{F}_p\) that we previously considered, all the useful operations are described by additions and multiplications. In those prime fields, the only automorphism is the identity map. However, when we consider non-prime fields \\(\mathbb{F}_{p^d}\\), there are several useful automorphisms of the form \\(x \mapsto x^{p^k}\\), where \\(0 < k < d\\). When \\(k=1\\), we call this the Frobenius automorphism. As such, where arithmetic circuits over \\(\mathbb{F}_p\\) were only comprised of additions and multiplications, we now consider additions, multiplications, and automorphisms.
+In the finite fields \\(\mathbb{F}_p\\) that we previously considered, all the useful operations are described by additions and multiplications. In those prime fields, the only automorphism is the identity map. However, when we consider non-prime fields \\(\mathbb{F}_{p^d}\\), there are several useful automorphisms of the form \\(x \mapsto x^{p^k}\\), where \\(0 < k < d\\). When \\(k=1\\), we call this the Frobenius automorphism. As such, where arithmetic circuits over \\(\mathbb{F}_p\\) were only comprised of additions and multiplications, we now consider additions, multiplications, and automorphisms.
 
 While these automorphisms may not seem all that useful by themselves, they can be used to efficiently compute the field norm and trace. These operations, in turn, can be used to (more) efficiently evaluate polynomials, as shown by Hiroki Okada, Rachel Player, and Simon Pohmann in [this article](https://eprint.iacr.org/2023/1304), or to speed up matrix multiplications, as shown by Jai Hyun Park in [this other article](https://eprint.iacr.org/2025/448). In this blog post, we will focus on univariate polynomial evaluation, which allows us to compute comparison operations even more efficiently than before!
 
@@ -17,7 +17,7 @@ So how does this work? The trick is that there is a relation between the minimal
 $$ \operatorname{Norm}(\alpha - x) = \operatorname{MiPo}(\alpha)(x), $$
 where \\(\operatorname{MiPo}(\alpha)\\) is the monic (univariate) polynomial of the lowest degree that maps \\(\alpha\\) to zero.
 Because no lower degree polynomials exist that also map \\(\alpha\\) to zero, the minimal polynomial is irreducible.
-This relation allows us to evaluate any irreducible polynomial over \\(\mathbb{F}_p\\) by finding a suitable \\(\alpha\\) and computing the field norm of \\(\alpha - x\\).
+This relation allows us to evaluate any irreducible polynomial over \\(\mathbb{F}_p\\) by finding a suitable \\(\alpha\\) and computing the field norm of \\(\alpha - x\\). Note that the polynomial's degree must be lower than \\(D\\)!
 
 So how do we find such a suitable \\(\alpha \in \mathbb{F}_{p^d}\\)? 
 To evaluate an irreducible monic polynomial with coefficients in \\( \mathbb{F}_p \\), we want to find its root in the polynomial ring \\(\mathbb{F}_{p^d}[X]\\).
@@ -34,14 +34,9 @@ Just like Hiroki Okada, Rachel Player, and Simon Pohmann, we add an easily compu
 
 Batching (or the SIMD encoding) is a ubiquitous tool in fully homomorphic encryption schemes such as BFV and BGV because it allows one to pack multiple elements into one ciphertext and perform the same additions and multiplications on all of them. The oraqle compiler so far has not considered batching at all, so the only way to exploit batching was to evaluate the circuit many times in parallel. However, batching can also be used when we only want to compute one evaluation of an arithmetic circuit.
 
-SPLIT INTO FPd
-GRID
+Batching relies on the fact that the quotient polynomial \\(X^N + 1\\) factors into multiple smaller equal-degree irreducible polynomials modulo \\(p\\). These sub-polynomials allow us to encode elements into separate slots, which are isomorphic to the finite fields we arithmetized over in the previous section. Previous work has shown how to achieve a grid layout for these slots, allowing rotating dimensions of the grid using automorphisms.
 
-FUNCTIONAL PROGRAMMING
-
-MAPS, REDUCES, SPLICING.
-
-CONSIDER HOW MANY ELEMENTS TO PACK.
+In the compiler, we introduce new nodes in the style of functional programming. For now, we are implementing maps, reduces, and splicing operations. When the sequences they work on are small enough, we can map them onto the grid layout mentioned above. The compiler tries many possible assignments to achieve a trade off between multiplications and automorphism operations (for rotations).
 
 
 <h2 data-processed="0">Polynomial evaluation in $\mathbb{Z}_p/(X^N + 1)$</h2>
