@@ -13,17 +13,18 @@
   contents:
     - title: Security Engineer
       institution: Apple
-      year: Feb 2024 - now
+      year: Feb 2024 - Jun 2025
       description:
         - Continuing my internship work on post-quantum cryptography
         - Working as a part-time contractor next to my PhD
         
     - title: PhD Student
       institution: Delft University of Technology
-      year: Jul 2021 - now
+      year: Jul 2021 - Jun 2025
       description:
         - Doing research in homomorphic encryption-based multi-party computation, optimizing arithmetic circuits
         - Teaching about fully-homomorphic encryption
+        - Graduated cum laude (highest distinction in Dutch universities)
         
     - title: Cryptographic Engineering Intern
       institution: Apple
