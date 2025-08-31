@@ -1,14 +1,14 @@
 ---
 layout: post
 date: 2025-08-31 11:30:00-0400
-inline: true
+inline: false
 ---
 
 Starting full-time job at Apple Paris! 🍏
 
 ---
 
-After my internship in 2023 at Apple in Cupertino and 1.5 years of part-time work for Apple remotely, I am beyond excited to announce that I will be joining Apple Paris for a full-time position! I had some time between obtaining my PhD and now that I have used to its full extent. Not only did I enjoy the Spanish weather, I worked on some cryptography-related hobby projects. While they are still W.I.P., I will briefly outline them below.
+After my internship in 2023 at Apple in Cupertino and 1.5 years of part-time work for Apple remotely, I am beyond excited to announce that I will be joining Apple Paris for a full-time position! I had some time between obtaining my PhD and now that I have used to its fullest extent. Not only did I enjoy some Spanish weather, I worked on some cryptography-related hobby projects. While they are still W.I.P., I will briefly outline them below.
 
 ---
 
